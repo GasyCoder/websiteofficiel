@@ -39,41 +39,41 @@ export default function Header() {
       )}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14">
+        <div className="flex items-center justify-between h-12">
           {/* Logo */}
           <a
             href="#accueil"
             className="flex items-center space-x-2 group"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-              <span className="text-white font-bold text-sm">JC</span>
+            <div className="w-7 h-7 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+              <span className="text-white font-bold text-xs">JC</span>
             </div>
-            <span className="text-lg font-bold text-gray-900 dark:text-white hidden sm:inline-block">
+            <span className="text-base font-bold text-gray-900 dark:text-white hidden sm:inline-block">
               Janga Consulting
             </span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-5">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors relative group"
+                className="text-[13px] text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors relative group"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-600 dark:bg-blue-400 group-hover:w-full transition-all duration-300" />
               </a>
             ))}
           </div>
 
           {/* Right side buttons */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5">
             <ThemeToggle />
             <a
               href="#contact"
-              className="hidden md:inline-flex items-center px-4 py-2 text-sm bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-lg transition-all hover:scale-105 shadow-md"
+              className="hidden md:inline-flex items-center px-3 py-1.5 text-[13px] bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-lg transition-all hover:scale-[1.02] shadow-sm"
             >
               Contact
             </a>
