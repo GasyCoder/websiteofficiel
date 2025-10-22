@@ -132,28 +132,28 @@ export default function Services() {
     <section
       id="services"
       ref={ref}
-      className="py-20 sm:py-24 lg:py-32 bg-white"
+      className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto text-center mb-16"
+          className="max-w-3xl mx-auto text-center mb-12"
         >
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
             Nos{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
               Services
             </span>
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
             Des solutions complètes et sur mesure pour répondre à tous vos besoins
             digitaux. De la conception à la mise en production.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => {
             const colors = colorMap[service.color];
             return (
@@ -162,37 +162,37 @@ export default function Services() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-gray-200"
+                className="group relative bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-gray-200 dark:hover:border-gray-600"
               >
                 {/* Icon */}
                 <div
-                  className={`w-16 h-16 ${colors.bg} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
+                  className={`w-12 h-12 ${colors.bg} dark:bg-opacity-10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
                 >
-                  <service.icon className={`w-8 h-8 ${colors.text}`} />
+                  <service.icon className={`w-6 h-6 ${colors.text} dark:opacity-90`} />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
                   {service.description}
                 </p>
 
                 {/* Features list */}
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <CheckCircle2 className={`w-5 h-5 ${colors.text} flex-shrink-0 mt-0.5`} />
-                      <span className="text-sm text-gray-600">{feature}</span>
+                      <CheckCircle2 className={`w-4 h-4 ${colors.text} dark:opacity-90 flex-shrink-0 mt-0.5`} />
+                      <span className="text-xs text-gray-600 dark:text-gray-400">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 {/* Gradient overlay on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${colors.gradient} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity pointer-events-none`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${colors.gradient} opacity-0 group-hover:opacity-5 dark:group-hover:opacity-10 rounded-xl transition-opacity pointer-events-none`} />
               </motion.div>
             );
           })}
@@ -203,18 +203,18 @@ export default function Services() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="mt-20 text-center bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-12 border border-blue-100"
+          className="mt-16 text-center bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-950/30 rounded-xl p-8 border border-blue-100 dark:border-blue-900/30"
         >
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
             Vous avez un projet en tête ?
           </h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-base text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
             Notre équipe est prête à vous accompagner de la conception à la
             réalisation de votre projet digital.
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:shadow-xl transition-all hover:scale-105"
+            className="inline-flex items-center px-6 py-2.5 text-sm bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all hover:scale-105"
           >
             Discutons de votre projet
           </a>
