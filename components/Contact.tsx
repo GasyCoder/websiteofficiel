@@ -48,10 +48,10 @@ export default function Contact() {
           className="max-w-3xl mx-auto mb-12 text-center"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-            Get in Touch
+            Get in <span className="text-gradient">Touch</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            Have a project in mind? Let&apos;s talk about it
+            Have a <span className="font-semibold text-violet-600 dark:text-violet-400">project</span> in mind? Let&apos;s talk about it
           </p>
         </motion.div>
 
@@ -110,7 +110,7 @@ export default function Contact() {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-4 py-3 text-sm border border-gray-300 dark:border-gray-700 dark:bg-[#121212] dark:text-white rounded-lg focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent transition-all outline-none"
+                    className="w-full px-4 py-3 text-sm border border-gray-300 dark:border-gray-700 dark:bg-[#121212] dark:text-white rounded-lg focus:ring-2 focus:ring-violet-600 dark:focus:ring-violet-500 focus:border-transparent transition-all outline-none"
                     placeholder="Your name"
                   />
                 </div>
@@ -126,7 +126,7 @@ export default function Contact() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 text-sm border border-gray-300 dark:border-gray-700 dark:bg-[#121212] dark:text-white rounded-lg focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent transition-all outline-none"
+                    className="w-full px-4 py-3 text-sm border border-gray-300 dark:border-gray-700 dark:bg-[#121212] dark:text-white rounded-lg focus:ring-2 focus:ring-violet-600 dark:focus:ring-violet-500 focus:border-transparent transition-all outline-none"
                     placeholder="you@example.com"
                   />
                 </div>
@@ -168,7 +168,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-full transition-all hover:scale-105 hover:shadow-lg"
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-blue-600 via-violet-600 to-orange-500 text-white font-medium rounded-full transition-all hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/50"
               >
                 <Send className="w-4 h-4" />
                 Send Message

@@ -67,10 +67,10 @@ export default function Services() {
           className="max-w-3xl mb-12"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-            Services
+            Our <span className="text-gradient-blue">Services</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            Comprehensive solutions for your digital needs
+            Comprehensive solutions for your <span className="font-semibold text-violet-600 dark:text-violet-400">digital needs</span>
           </p>
         </motion.div>
 
@@ -114,16 +114,16 @@ export default function Services() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="mt-16 text-center"
         >
-          <div className="inline-flex flex-col items-center gap-6 p-12 bg-gray-50 dark:bg-[#1a1a1a] rounded-3xl border border-gray-200 dark:border-gray-800">
+          <div className="inline-flex flex-col items-center gap-6 p-12 bg-gradient-to-br from-blue-50 via-violet-50 to-orange-50 dark:from-blue-950/20 dark:via-violet-950/20 dark:to-orange-950/20 rounded-3xl border-2 border-violet-200 dark:border-violet-800">
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
-              Ready to start your project?
+              Ready to start your <span className="text-gradient">project</span>?
             </h3>
             <p className="text-gray-600 dark:text-gray-400 max-w-xl">
               Let&apos;s discuss how we can help bring your vision to life
             </p>
             <a
               href="#contact"
-              className="inline-flex items-center px-8 py-3.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-full transition-all hover:scale-105 hover:shadow-lg"
+              className="inline-flex items-center px-8 py-3.5 bg-gradient-to-r from-blue-600 via-violet-600 to-orange-500 text-white font-medium rounded-full transition-all hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/50"
             >
               Contact Us
             </a>
