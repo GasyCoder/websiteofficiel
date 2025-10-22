@@ -56,7 +56,7 @@ export default function Services() {
     <section
       id="services"
       ref={ref}
-      className="py-24 sm:py-32 bg-white dark:bg-[#121212]"
+      className="py-16 sm:py-20 bg-white dark:bg-[#121212]"
     >
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
@@ -64,7 +64,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-16"
+          className="max-w-3xl mb-12"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
             Services
@@ -112,7 +112,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="mt-20 text-center"
+          className="mt-16 text-center"
         >
           <div className="inline-flex flex-col items-center gap-6 p-12 bg-gray-50 dark:bg-[#1a1a1a] rounded-3xl border border-gray-200 dark:border-gray-800">
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">

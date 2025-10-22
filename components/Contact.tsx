@@ -37,7 +37,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className="py-24 sm:py-32 bg-gray-50 dark:bg-[#0a0a0a]"
+      className="py-16 sm:py-20 bg-gray-50 dark:bg-[#0a0a0a]"
     >
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
@@ -45,7 +45,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-16"
+          className="max-w-3xl mx-auto mb-12 text-center"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
             Get in Touch
@@ -55,7 +55,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {/* Contact Info Cards */}
           {contactInfo.map((info, index) => (
             <motion.a
@@ -84,7 +84,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 max-w-3xl"
+          className="mt-10 max-w-3xl mx-auto"
         >
           <div className="bg-white dark:bg-[#1a1a1a] rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
