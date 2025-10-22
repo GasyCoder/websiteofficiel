@@ -49,7 +49,7 @@ export default function Team() {
     <section
       id="equipe"
       ref={ref}
-      className="py-24 sm:py-32 bg-white dark:bg-[#121212]"
+      className="py-16 sm:py-20 bg-white dark:bg-[#121212]"
     >
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
@@ -57,7 +57,7 @@ export default function Team() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-16"
+          className="max-w-3xl mb-12"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
             Team
