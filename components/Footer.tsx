@@ -110,30 +110,6 @@ export default function Footer() {
             <p className="text-gray-400 dark:text-gray-500 text-xs text-center md:text-left">
               © {currentYear} Janga Consulting. Tous droits réservés.
             </p>
-<<<<<<< HEAD
-            <p className="text-gray-400 dark:text-gray-500 text-xs text-center md:text-right">
-=======
-            {/* <p className="text-gray-400 text-sm text-center md:text-right">
->>>>>>> f043f73 (Masquer le crédit de développement dans le pied de page)
-              Site développé avec{" "}
-              <a
-                href="https://nextjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 transition-colors font-semibold"
-              >
-                Next.js
-              </a>{" "}
-              et{" "}
-              <a
-                href="https://tailwindcss.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 transition-colors font-semibold"
-              >
-                Tailwind CSS
-              </a>
-            </p> */}
           </div>
         </div>
       </div>

@@ -15,8 +15,8 @@ export default function ThemeToggle() {
   // Eviter le flash pendant le SSR
   if (!mounted) {
     return (
-      <div className="p-2 w-9 h-9" aria-label="Toggle theme">
-        <div className="w-5 h-5" />
+      <div className="w-8 h-8" aria-label="Toggle theme">
+        <div className="w-4 h-4" />
       </div>
     );
   }
@@ -24,14 +24,26 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+      className="relative w-8 h-8 rounded-full hover:bg-gray-100/80 dark:hover:bg-gray-800/80 transition-all duration-300 flex items-center justify-center group"
       aria-label="Toggle theme"
+      title={theme === "light" ? "Mode sombre" : "Mode clair"}
     >
-      {theme === "light" ? (
-        <Moon className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-      ) : (
-        <Sun className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-      )}
+      <div className="relative w-4 h-4">
+        <Moon
+          className={`w-4 h-4 text-gray-600 dark:text-gray-300 absolute inset-0 transition-all duration-300 ${
+            theme === "light"
+              ? "opacity-100 rotate-0 scale-100"
+              : "opacity-0 rotate-90 scale-50"
+          }`}
+        />
+        <Sun
+          className={`w-4 h-4 text-gray-600 dark:text-gray-300 absolute inset-0 transition-all duration-300 ${
+            theme === "dark"
+              ? "opacity-100 rotate-0 scale-100"
+              : "opacity-0 -rotate-90 scale-50"
+          }`}
+        />
+      </div>
     </button>
   );
 }
