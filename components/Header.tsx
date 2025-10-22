@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
+import { useTheme } from "./ThemeProvider";
 import Image from "next/image";
 
 /**
@@ -12,6 +13,7 @@ import Image from "next/image";
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,9 +49,9 @@ export default function Header() {
             className="flex items-center space-x-2.5 group"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            <div className="relative w-8 h-8 text-gray-900 dark:text-white transition-transform group-hover:scale-105">
+            <div className="relative w-8 h-8 transition-transform group-hover:scale-105">
               <Image
-                src="/logo.svg"
+                src={theme === "dark" ? "/logo-dark.svg" : "/logo-light.svg"}
                 alt="Janga Logo"
                 width={32}
                 height={32}
