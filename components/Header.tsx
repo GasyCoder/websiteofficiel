@@ -49,7 +49,7 @@ export default function Header() {
           >
             <div className="relative w-8 h-8 text-gray-900 dark:text-white transition-transform group-hover:scale-105">
               <Image
-                src="/logo.svg"
+                src="/janga.svg"
                 alt="Janga Logo"
                 width={32}
                 height={32}
