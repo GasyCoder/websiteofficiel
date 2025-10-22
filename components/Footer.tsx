@@ -96,29 +96,20 @@ export default function Footer() {
             <p className="text-gray-500 dark:text-gray-500 text-xs">
               © {currentYear} Janga Consulting. All rights reserved.
             </p>
-            <p className="text-gray-500 dark:text-gray-500 text-xs">
-              Built with Next.js & Tailwind CSS
-            </p>
-            <p className="text-gray-400 dark:text-gray-500 text-xs text-center md:text-right">
-              Site développé avec{" "}
+            <div className="flex gap-6 text-xs">
               <a
-                href="https://nextjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 transition-colors font-semibold"
+                href="/politique-de-confidentialite"
+                className="text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
-                Next.js
-              </a>{" "}
-              et{" "}
-              <a
-                href="https://tailwindcss.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 transition-colors font-semibold"
-              >
-                Tailwind CSS
+                Politique de confidentialité
               </a>
-            </p>
+              <a
+                href="/conditions-utilisation"
+                className="text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
+              >
+                Conditions d'utilisation
+              </a>
+            </div>
           </div>
         </div>
       </div>
