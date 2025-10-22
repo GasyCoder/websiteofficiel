@@ -10,11 +10,10 @@ import {
   Database,
   Cloud,
   TrendingUp,
-  CheckCircle2,
 } from "lucide-react";
 
 /**
- * Section Services de Janga Consulting
+ * Services Section - Modern Minimalist Design
  */
 export default function Services() {
   const ref = useRef(null);
@@ -23,201 +22,112 @@ export default function Services() {
   const services = [
     {
       icon: Code2,
-      title: "Développement Web",
-      description:
-        "Création de sites web et applications performantes avec les dernières technologies (React, Next.js, Node.js).",
-      features: [
-        "Sites vitrine et e-commerce",
-        "Applications web sur mesure",
-        "Progressive Web Apps (PWA)",
-      ],
-      color: "blue",
+      title: "Web Development",
+      description: "Modern web applications built with cutting-edge technologies",
     },
     {
       icon: Smartphone,
-      title: "Applications Mobiles",
-      description:
-        "Développement d'applications mobiles natives et cross-platform pour iOS et Android.",
-      features: [
-        "React Native",
-        "Interface utilisateur intuitive",
-        "Optimisation des performances",
-      ],
-      color: "indigo",
+      title: "Mobile Apps",
+      description: "Native and cross-platform mobile solutions",
     },
     {
       icon: PenTool,
       title: "UI/UX Design",
-      description:
-        "Conception d'interfaces modernes, élégantes et centrées sur l'expérience utilisateur.",
-      features: [
-        "Design system",
-        "Prototypage interactif",
-        "Tests utilisateurs",
-      ],
-      color: "purple",
+      description: "Beautiful interfaces that users love",
     },
     {
       icon: Database,
-      title: "Conseil Technologique",
-      description:
-        "Accompagnement stratégique pour choisir les meilleures solutions techniques adaptées à vos besoins.",
-      features: [
-        "Audit technique",
-        "Architecture logicielle",
-        "Choix des technologies",
-      ],
-      color: "pink",
+      title: "Tech Consulting",
+      description: "Strategic guidance for your tech stack",
     },
     {
       icon: Cloud,
-      title: "Hébergement & DevOps",
-      description:
-        "Déploiement, hébergement et maintenance de vos applications dans le cloud.",
-      features: [
-        "CI/CD automatisé",
-        "Monitoring 24/7",
-        "Optimisation des coûts",
-      ],
-      color: "cyan",
+      title: "Cloud & DevOps",
+      description: "Scalable infrastructure and deployment",
     },
     {
       icon: TrendingUp,
-      title: "Transformation Digitale",
-      description:
-        "Accompagnement complet pour digitaliser vos processus et améliorer votre présence en ligne.",
-      features: [
-        "Stratégie digitale",
-        "Formation des équipes",
-        "Accompagnement continu",
-      ],
-      color: "emerald",
+      title: "Digital Growth",
+      description: "Transform your business digitally",
     },
   ];
-
-  const colorMap: Record<string, { bg: string; text: string; gradient: string }> = {
-    blue: {
-      bg: "bg-blue-50",
-      text: "text-blue-600",
-      gradient: "from-blue-600 to-cyan-600",
-    },
-    indigo: {
-      bg: "bg-indigo-50",
-      text: "text-indigo-600",
-      gradient: "from-indigo-600 to-purple-600",
-    },
-    purple: {
-      bg: "bg-purple-50",
-      text: "text-purple-600",
-      gradient: "from-purple-600 to-pink-600",
-    },
-    pink: {
-      bg: "bg-pink-50",
-      text: "text-pink-600",
-      gradient: "from-pink-600 to-rose-600",
-    },
-    cyan: {
-      bg: "bg-cyan-50",
-      text: "text-cyan-600",
-      gradient: "from-cyan-600 to-blue-600",
-    },
-    emerald: {
-      bg: "bg-emerald-50",
-      text: "text-emerald-600",
-      gradient: "from-emerald-600 to-green-600",
-    },
-  };
 
   return (
     <section
       id="services"
       ref={ref}
-      className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-gray-900"
+      className="py-24 sm:py-32 bg-white dark:bg-[#121212]"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto text-center mb-12"
+          className="max-w-3xl mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
-            Nos{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
-              Services
-            </span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
+            Services
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-            Des solutions complètes et sur mesure pour répondre à tous vos besoins
-            digitaux. De la conception à la mise en production.
+          <p className="text-lg text-gray-600 dark:text-gray-400">
+            Comprehensive solutions for your digital needs
           </p>
         </motion.div>
 
+        {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => {
-            const colors = colorMap[service.color];
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-gray-200 dark:hover:border-gray-600"
-              >
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group relative"
+            >
+              <div className="h-full p-8 bg-gray-50 dark:bg-[#1a1a1a] rounded-2xl border border-gray-200 dark:border-gray-800 transition-all hover:border-gray-300 dark:hover:border-gray-700 hover:shadow-lg">
                 {/* Icon */}
-                <div
-                  className={`w-12 h-12 ${colors.bg} dark:bg-opacity-10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
-                >
-                  <service.icon className={`w-6 h-6 ${colors.text} dark:opacity-90`} />
+                <div className="mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-gray-900 dark:bg-white flex items-center justify-center transition-transform group-hover:scale-110">
+                    <service.icon className="w-6 h-6 text-white dark:text-gray-900" />
+                  </div>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                {/* Content */}
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {service.title}
                 </h3>
-
-                {/* Description */}
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                   {service.description}
                 </p>
 
-                {/* Features list */}
-                <ul className="space-y-2">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <CheckCircle2 className={`w-4 h-4 ${colors.text} dark:opacity-90 flex-shrink-0 mt-0.5`} />
-                      <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Gradient overlay on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${colors.gradient} opacity-0 group-hover:opacity-5 dark:group-hover:opacity-10 rounded-xl transition-opacity pointer-events-none`} />
-              </motion.div>
-            );
-          })}
+                {/* Hover effect */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-gray-900/5 to-transparent dark:from-white/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+              </div>
+            </motion.div>
+          ))}
         </div>
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="mt-16 text-center bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-950/30 rounded-xl p-8 border border-blue-100 dark:border-blue-900/30"
+          className="mt-20 text-center"
         >
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-            Vous avez un projet en tête ?
-          </h3>
-          <p className="text-base text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
-            Notre équipe est prête à vous accompagner de la conception à la
-            réalisation de votre projet digital.
-          </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center px-6 py-2.5 text-sm bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all hover:scale-105"
-          >
-            Discutons de votre projet
-          </a>
+          <div className="inline-flex flex-col items-center gap-6 p-12 bg-gray-50 dark:bg-[#1a1a1a] rounded-3xl border border-gray-200 dark:border-gray-800">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+              Ready to start your project?
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 max-w-xl">
+              Let&apos;s discuss how we can help bring your vision to life
+            </p>
+            <a
+              href="#contact"
+              className="inline-flex items-center px-8 py-3.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-full transition-all hover:scale-105 hover:shadow-lg"
+            >
+              Contact Us
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

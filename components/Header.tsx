@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
 
 /**
- * Header component avec navigation sticky et menu mobile
+ * Header - Modern Minimalist Navigation
  */
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,9 +22,9 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { href: "#accueil", label: "Accueil" },
-    { href: "#a-propos", label: "À propos" },
-    { href: "#equipe", label: "Équipe" },
+    { href: "#accueil", label: "Home" },
+    { href: "#a-propos", label: "About" },
+    { href: "#equipe", label: "Team" },
     { href: "#services", label: "Services" },
     { href: "#contact", label: "Contact" },
   ];
@@ -34,46 +34,45 @@ export default function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-sm border-b border-gray-200 dark:border-gray-800"
+          ? "bg-white/80 dark:bg-[#121212]/80 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800"
           : "bg-transparent"
       )}
     >
-      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-12">
+      <nav className="container mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a
             href="#accueil"
-            className="flex items-center space-x-2 group"
+            className="flex items-center space-x-2.5 group"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            <div className="w-7 h-7 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-              <span className="text-white font-bold text-xs">JC</span>
+            <div className="w-8 h-8 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center transition-transform group-hover:scale-105">
+              <span className="text-white dark:text-gray-900 font-bold text-sm">JC</span>
             </div>
-            <span className="text-base font-bold text-gray-900 dark:text-white hidden sm:inline-block">
-              Janga Consulting
+            <span className="text-base font-semibold text-gray-900 dark:text-white hidden sm:inline-block">
+              Janga
             </span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-5">
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-[13px] text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors relative group"
+                className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white font-medium transition-colors"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-600 dark:bg-blue-400 group-hover:w-full transition-all duration-300" />
               </a>
             ))}
           </div>
 
-          {/* Right side buttons */}
-          <div className="flex items-center gap-1.5">
+          {/* Right side */}
+          <div className="flex items-center gap-3">
             <ThemeToggle />
             <a
               href="#contact"
-              className="hidden md:inline-flex items-center px-3 py-1.5 text-[13px] bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-lg transition-all hover:scale-[1.02] shadow-sm"
+              className="hidden md:inline-flex items-center px-5 py-2 text-sm bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-full transition-all hover:scale-105"
             >
               Contact
             </a>
@@ -85,9 +84,9 @@ export default function Header() {
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
-                <X className="w-5 h-5 text-gray-900 dark:text-gray-100" />
+                <X className="w-5 h-5 text-gray-900 dark:text-white" />
               ) : (
-                <Menu className="w-5 h-5 text-gray-900 dark:text-gray-100" />
+                <Menu className="w-5 h-5 text-gray-900 dark:text-white" />
               )}
             </button>
           </div>
@@ -95,13 +94,13 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-3 border-t border-gray-200 dark:border-gray-800 bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg">
-            <div className="flex flex-col space-y-2">
+          <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-800">
+            <div className="flex flex-col space-y-1">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg font-medium transition-colors"
+                  className="px-4 py-3 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-900 rounded-lg font-medium transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
@@ -109,10 +108,10 @@ export default function Header() {
               ))}
               <a
                 href="#contact"
-                className="mx-3 mt-2 px-3 py-2 text-sm bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-lg text-center transition-colors"
+                className="mx-4 mt-2 px-4 py-3 text-sm bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-full text-center transition-all"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Nous contacter
+                Contact
               </a>
             </div>
           </div>
