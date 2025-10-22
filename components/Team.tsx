@@ -61,7 +61,7 @@ export default function Team() {
     <section
       id="equipe"
       ref={ref}
-      className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-950/20"
+      className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-950/20"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -111,10 +111,10 @@ export default function Team() {
                   <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1.5">
                     {member.name}
                   </h3>
-                  <p className={`text-xs font-semibold bg-gradient-to-r ${member.gradient} bg-clip-text text-transparent mb-3`}>
+                  <p className={`text-sm font-semibold bg-gradient-to-r ${member.gradient} bg-clip-text text-transparent mb-3`}>
                     {member.role}
                   </p>
-                  <p className="text-gray-600 dark:text-gray-400 text-xs leading-relaxed mb-4">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
                     {member.description}
                   </p>
 

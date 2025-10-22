@@ -132,7 +132,7 @@ export default function Services() {
     <section
       id="services"
       ref={ref}
-      className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900"
+      className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-gray-900"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -186,7 +186,7 @@ export default function Services() {
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <CheckCircle2 className={`w-4 h-4 ${colors.text} dark:opacity-90 flex-shrink-0 mt-0.5`} />
-                      <span className="text-xs text-gray-600 dark:text-gray-400">{feature}</span>
+                      <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
                     </li>
                   ))}
                 </ul>
