@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
+import Image from "next/image";
 
 /**
  * Header - Modern Minimalist Navigation
@@ -46,8 +47,15 @@ export default function Header() {
             className="flex items-center space-x-2.5 group"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            <div className="w-8 h-8 bg-gray-900 dark:bg-white rounded-lg flex items-center justify-center transition-transform group-hover:scale-105">
-              <span className="text-white dark:text-gray-900 font-bold text-sm">JC</span>
+            <div className="relative w-8 h-8 text-gray-900 dark:text-white transition-transform group-hover:scale-105">
+              <Image
+                src="/logo.svg"
+                alt="Janga Logo"
+                width={32}
+                height={32}
+                className="w-full h-full"
+                priority
+              />
             </div>
             <span className="text-base font-semibold text-gray-900 dark:text-white hidden sm:inline-block">
               Janga
