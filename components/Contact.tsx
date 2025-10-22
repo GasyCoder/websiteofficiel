@@ -40,7 +40,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-950/20 dark:to-purple-950/20"
+      className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-950/20 dark:to-purple-950/20"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div

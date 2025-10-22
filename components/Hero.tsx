@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section
       id="accueil"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-blue-950"
+      className="relative min-h-[650px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-blue-950"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-indigo-200 dark:bg-indigo-900/30 rounded-full mix-blend-multiply dark:mix-blend-lighten filter blur-3xl opacity-30 animate-pulse animation-delay-4000" />
       </div>
 
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo animé */}
           <motion.div
