@@ -2,12 +2,27 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 /**
  * Hero Section - Modern Minimalist Design
  * Inspired by SpaceX & Google
  */
 export default function Hero() {
+  const [typedText, setTypedText] = useState("");
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
+  const fullText = "Building exceptional digital experiences";
+
+  useEffect(() => {
+    if (typedText.length < fullText.length) {
+      const timeout = setTimeout(() => {
+        setTypedText(fullText.slice(0, typedText.length + 1));
+      }, 80);
+      return () => clearTimeout(timeout);
+    } else {
+      setIsTypingComplete(true);
+    }
+  }, [typedText, fullText]);
   return (
     <section
       id="accueil"
@@ -48,19 +63,22 @@ export default function Hero() {
               className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight"
             >
               <span className="block text-gray-900 dark:text-white">
-                Janga Consulting
+                Janga <span className="text-gradient">Consulting</span>
               </span>
             </motion.h1>
 
-            {/* Tagline */}
-            <motion.p
+            {/* Tagline with typing effect */}
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="text-xl sm:text-2xl lg:text-3xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto font-light"
+              className="text-xl sm:text-2xl lg:text-3xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto font-light min-h-[2.5rem] sm:min-h-[3rem] lg:min-h-[3.5rem]"
             >
-              Building exceptional digital experiences
-            </motion.p>
+              <span>{typedText}</span>
+              {!isTypingComplete && (
+                <span className="animate-pulse text-gradient">|</span>
+              )}
+            </motion.div>
 
             {/* Short description */}
             <motion.p
@@ -81,14 +99,14 @@ export default function Hero() {
             >
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-2 px-8 py-3.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-full transition-all hover:scale-105 hover:shadow-lg hover:shadow-gray-900/20 dark:hover:shadow-white/20"
+                className="group inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-blue-600 via-violet-600 to-orange-500 text-white font-medium rounded-full transition-all hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/50"
               >
                 Get Started
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="#services"
-                className="inline-flex items-center gap-2 px-8 py-3.5 bg-transparent text-gray-900 dark:text-white font-medium rounded-full border border-gray-300 dark:border-gray-700 transition-all hover:bg-gray-50 dark:hover:bg-gray-900 hover:border-gray-400 dark:hover:border-gray-600"
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-transparent text-gray-900 dark:text-white font-medium rounded-full border-2 border-violet-600 dark:border-violet-500 transition-all hover:bg-violet-600 hover:text-white dark:hover:bg-violet-600 dark:hover:text-white hover:shadow-lg hover:shadow-violet-500/50"
               >
                 View Services
               </a>

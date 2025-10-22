@@ -107,7 +107,7 @@ export default function Footer() {
                 href="/conditions-utilisation"
                 className="text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
-                Conditions d'utilisation
+                Conditions d&apos;utilisation
               </a>
             </div>
           </div>

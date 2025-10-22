@@ -60,10 +60,10 @@ export default function Team() {
           className="max-w-3xl mb-12"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-            Team
+            Our <span className="text-gradient-orange">Team</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            Passionate professionals dedicated to your success
+            <span className="font-semibold text-orange-600 dark:text-orange-400">Passionate professionals</span> dedicated to your success
           </p>
         </motion.div>
 

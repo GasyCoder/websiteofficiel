@@ -32,7 +32,7 @@ export default function PolitiqueDeConfidentialite() {
             href="/"
             className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
           >
-            ← Retour à l'accueil
+            ← Retour à l&apos;accueil
           </Link>
         </div>
 
@@ -49,7 +49,7 @@ export default function PolitiqueDeConfidentialite() {
               1. Introduction
             </h2>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-              Janga Consulting s'engage à protéger la confidentialité de vos données personnelles. Cette politique décrit comment nous collectons, utilisons, stockons et protégeons vos informations lorsque vous utilisez notre site web et nos services.
+              Janga Consulting s&apos;engage à protéger la confidentialité de vos données personnelles. Cette politique décrit comment nous collectons, utilisons, stockons et protégeons vos informations lorsque vous utilisez notre site web et nos services.
             </p>
           </section>
 
@@ -61,7 +61,7 @@ export default function PolitiqueDeConfidentialite() {
               Nous collectons les types de données suivants :
             </p>
             <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2 ml-4">
-              <li>Informations d'identification (nom, prénom, email)</li>
+              <li>Informations d&apos;identification (nom, prénom, email)</li>
               <li>Données de contact (numéro de téléphone, adresse postale)</li>
               <li>Informations professionnelles (entreprise, fonction)</li>
               <li>Données de navigation (cookies, adresse IP, type de navigateur)</li>
@@ -80,7 +80,7 @@ export default function PolitiqueDeConfidentialite() {
               <li>Fournir et améliorer nos services</li>
               <li>Répondre à vos demandes et questions</li>
               <li>Vous envoyer des informations sur nos services (avec votre consentement)</li>
-              <li>Analyser l'utilisation de notre site web</li>
+              <li>Analyser l&apos;utilisation de notre site web</li>
               <li>Respecter nos obligations légales</li>
             </ul>
           </section>
@@ -90,7 +90,7 @@ export default function PolitiqueDeConfidentialite() {
               4. Protection des données
             </h2>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-              Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, perte, destruction ou altération. Cela inclut le chiffrement des données, des contrôles d'accès stricts et des audits de sécurité réguliers.
+              Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, perte, destruction ou altération. Cela inclut le chiffrement des données, des contrôles d&apos;accès stricts et des audits de sécurité réguliers.
             </p>
           </section>
 
@@ -116,12 +116,12 @@ export default function PolitiqueDeConfidentialite() {
               Conformément au RGPD et aux lois applicables, vous disposez des droits suivants :
             </p>
             <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2 ml-4">
-              <li>Droit d'accès à vos données personnelles</li>
+              <li>Droit d&apos;accès à vos données personnelles</li>
               <li>Droit de rectification de vos données</li>
-              <li>Droit à l'effacement de vos données</li>
+              <li>Droit à l&apos;effacement de vos données</li>
               <li>Droit à la limitation du traitement</li>
               <li>Droit à la portabilité de vos données</li>
-              <li>Droit d'opposition au traitement</li>
+              <li>Droit d&apos;opposition au traitement</li>
             </ul>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
               Pour exercer ces droits, contactez-nous à : <a href="mailto:contact@jangaconsulting.com" className="text-blue-600 dark:text-blue-400 hover:underline">contact@jangaconsulting.com</a>

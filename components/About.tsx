@@ -50,11 +50,11 @@ export default function About() {
           className="max-w-3xl mb-12"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-            About
+            About <span className="text-gradient-violet">Us</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-            Based in <span className="font-semibold">Mahajanga, Madagascar</span>, we&apos;re a digital agency
-            specializing in web development, technical consulting, and digital innovation.
+            Based in <span className="font-semibold text-orange-600 dark:text-orange-400">Mahajanga, Madagascar</span>, we&apos;re a digital agency
+            specializing in <span className="font-semibold text-blue-600 dark:text-blue-400">web development</span>, technical consulting, and <span className="font-semibold text-violet-600 dark:text-violet-400">digital innovation</span>.
           </p>
         </motion.div>
 
