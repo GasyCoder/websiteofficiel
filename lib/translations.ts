@@ -34,10 +34,6 @@ export const translations = {
     "about.feature.results": "Results",
     "about.feature.results_desc": "On-time delivery with quality focus",
 
-    // Team
-    "team.title": "Our Team",
-    "team.subtitle": "Meet the experts who make innovation happen",
-
     // Services
     "services.title": "Our",
     "services.title_highlight": "Services",
@@ -115,10 +111,6 @@ export const translations = {
     "about.feature.expertise_desc": "Équipe qualifiée prête à relever tous les défis",
     "about.feature.results": "Résultats",
     "about.feature.results_desc": "Livraison dans les délais avec un focus sur la qualité",
-
-    // Team
-    "team.title": "Notre Équipe",
-    "team.subtitle": "Rencontrez les experts qui font l'innovation",
 
     // Services
     "services.title": "Nos",
