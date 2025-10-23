@@ -58,7 +58,7 @@ export default function Header() {
               />
             </div>
             <span className="text-base font-semibold text-gray-900 dark:text-white hidden sm:inline-block">
-              Janga
+              Janga Consulting
             </span>
           </a>
 
