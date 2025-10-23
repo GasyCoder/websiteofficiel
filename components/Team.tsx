@@ -38,7 +38,7 @@ export default function Team() {
     {
       name: "Billy Laurant",
       role: "Financial Director",
-      avatar: "🎨",
+      avatar: "📊",
     },
     {
       name: "Eliot",
