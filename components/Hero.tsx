@@ -3,15 +3,22 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 /**
  * Hero Section - Modern Minimalist Design
  * Inspired by SpaceX & Google
  */
 export default function Hero() {
+  const { t } = useLanguage();
   const [typedText, setTypedText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
-  const fullText = "Building exceptional digital experiences";
+  const fullText = t("hero.tagline");
+
+  useEffect(() => {
+    setTypedText("");
+    setIsTypingComplete(false);
+  }, [fullText]);
 
   useEffect(() => {
     if (typedText.length < fullText.length) {
@@ -51,7 +58,7 @@ export default function Hero() {
               className="inline-block"
             >
               <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700">
-                Digital Innovation Studio
+                {t("hero.badge")}
               </span>
             </motion.div>
 
@@ -63,7 +70,7 @@ export default function Hero() {
               className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight"
             >
               <span className="block text-gray-900 dark:text-white">
-                Janga <span className="text-gradient">Consulting</span>
+                {t("hero.company").split(" ")[0]} <span className="text-gradient">{t("hero.company").split(" ")[1]}</span>
               </span>
             </motion.h1>
 
@@ -87,7 +94,7 @@ export default function Hero() {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="text-base sm:text-lg text-gray-500 dark:text-gray-500 max-w-2xl mx-auto"
             >
-              We craft modern web solutions that drive results
+              {t("hero.description")}
             </motion.p>
 
             {/* CTA Buttons */}
@@ -101,14 +108,14 @@ export default function Hero() {
                 href="#contact"
                 className="group inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-blue-600 via-violet-600 to-orange-500 text-white font-medium rounded-full transition-all hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/50"
               >
-                Get Started
+                {t("hero.cta")}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="#services"
                 className="inline-flex items-center gap-2 px-8 py-3.5 bg-transparent text-gray-900 dark:text-white font-medium rounded-full border-2 border-violet-600 dark:border-violet-500 transition-all hover:bg-violet-600 hover:text-white dark:hover:bg-violet-600 dark:hover:text-white hover:shadow-lg hover:shadow-violet-500/50"
               >
-                View Services
+                {t("hero.view_services")}
               </a>
             </motion.div>
 
@@ -121,17 +128,17 @@ export default function Hero() {
             >
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">6+</div>
-                <div className="text-gray-500 dark:text-gray-500 mt-1">Experts</div>
+                <div className="text-gray-500 dark:text-gray-500 mt-1">{t("hero.stats.experts")}</div>
               </div>
               <div className="w-px h-12 bg-gray-200 dark:bg-gray-800" />
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">50+</div>
-                <div className="text-gray-500 dark:text-gray-500 mt-1">Projects</div>
+                <div className="text-gray-500 dark:text-gray-500 mt-1">{t("hero.stats.projects")}</div>
               </div>
               <div className="w-px h-12 bg-gray-200 dark:bg-gray-800" />
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">100%</div>
-                <div className="text-gray-500 dark:text-gray-500 mt-1">Satisfaction</div>
+                <div className="text-gray-500 dark:text-gray-500 mt-1">{t("hero.stats.satisfaction")}</div>
               </div>
             </motion.div>
           </motion.div>

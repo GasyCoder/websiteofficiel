@@ -11,6 +11,7 @@ import {
   Cloud,
   TrendingUp,
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 /**
  * Services Section - Modern Minimalist Design
@@ -18,37 +19,38 @@ import {
 export default function Services() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   const services = [
     {
       icon: Code2,
-      title: "Web Development",
-      description: "Modern web applications built with cutting-edge technologies",
+      title: t("services.web_dev"),
+      description: t("services.web_dev_desc"),
     },
     {
       icon: Smartphone,
-      title: "Mobile Apps",
-      description: "Native and cross-platform mobile solutions",
+      title: t("services.mobile_apps"),
+      description: t("services.mobile_apps_desc"),
     },
     {
       icon: PenTool,
-      title: "UI/UX Design",
-      description: "Beautiful interfaces that users love",
+      title: t("services.ui_ux"),
+      description: t("services.ui_ux_desc"),
     },
     {
       icon: Database,
-      title: "Tech Consulting",
-      description: "Strategic guidance for your tech stack",
+      title: t("services.tech_consulting"),
+      description: t("services.tech_consulting_desc"),
     },
     {
       icon: Cloud,
-      title: "Cloud & DevOps",
-      description: "Scalable infrastructure and deployment",
+      title: t("services.cloud_devops"),
+      description: t("services.cloud_devops_desc"),
     },
     {
       icon: TrendingUp,
-      title: "Digital Growth",
-      description: "Transform your business digitally",
+      title: t("services.digital_growth"),
+      description: t("services.digital_growth_desc"),
     },
   ];
 
@@ -67,10 +69,11 @@ export default function Services() {
           className="max-w-3xl mb-12"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-            Our <span className="text-gradient-blue">Services</span>
+            {t("services.title")} <span className="text-gradient-blue">{t("services.title_highlight")}</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            Comprehensive solutions for your <span className="font-semibold text-violet-600 dark:text-violet-400">digital needs</span>
+            {t("services.subtitle").replace("{digitalNeeds}", "")}
+            <span className="font-semibold text-violet-600 dark:text-violet-400">{t("services.digital_needs")}</span>
           </p>
         </motion.div>
 
@@ -116,16 +119,17 @@ export default function Services() {
         >
           <div className="inline-flex flex-col items-center gap-6 p-12 bg-gradient-to-br from-blue-50 via-violet-50 to-orange-50 dark:from-blue-950/20 dark:via-violet-950/20 dark:to-orange-950/20 rounded-3xl border-2 border-violet-200 dark:border-violet-800">
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
-              Ready to start your <span className="text-gradient">project</span>?
+              {t("services.cta.title").replace("{project}", "")}
+              <span className="text-gradient">{t("services.cta.project")}</span>?
             </h3>
             <p className="text-gray-600 dark:text-gray-400 max-w-xl">
-              Let&apos;s discuss how we can help bring your vision to life
+              {t("services.cta.description")}
             </p>
             <a
               href="#contact"
               className="inline-flex items-center px-8 py-3.5 bg-gradient-to-r from-blue-600 via-violet-600 to-orange-500 text-white font-medium rounded-full transition-all hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/50"
             >
-              Contact Us
+              {t("services.cta.button")}
             </a>
           </div>
         </motion.div>

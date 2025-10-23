@@ -1,12 +1,14 @@
 "use client";
 
 import { Linkedin, Github, Mail, MapPin } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 /**
  * Footer - Modern Minimalist Design
  */
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   const socialLinks = [
     { icon: Linkedin, href: "#", label: "LinkedIn" },
@@ -14,11 +16,11 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { label: "Home", href: "#accueil" },
-    { label: "About", href: "#a-propos" },
-    { label: "Team", href: "#equipe" },
-    { label: "Services", href: "#services" },
-    { label: "Contact", href: "#contact" },
+    { label: t("nav.home"), href: "#accueil" },
+    { label: t("nav.about"), href: "#a-propos" },
+    { label: t("nav.team"), href: "#equipe" },
+    { label: t("nav.services"), href: "#services" },
+    { label: t("nav.contact"), href: "#contact" },
   ];
 
   return (
@@ -36,7 +38,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 max-w-sm leading-relaxed">
-              Digital agency based in Mahajanga, Madagascar. Transforming ideas into exceptional digital experiences.
+              {t("footer.description")}
             </p>
 
             {/* Contact Info */}
@@ -94,7 +96,7 @@ export default function Footer() {
         <div className="border-t border-gray-200 dark:border-gray-800 mt-12 pt-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-gray-500 dark:text-gray-500 text-xs">
-              © {currentYear} Janga Consulting. All rights reserved.
+              © {currentYear} Janga Consulting. {t("footer.rights")}
             </p>
             <div className="flex gap-6 text-xs">
               <a

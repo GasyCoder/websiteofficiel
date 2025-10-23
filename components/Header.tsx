@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
+import LanguageSelector from "./LanguageSelector";
+import { useLanguage } from "@/contexts/LanguageContext";
 import Image from "next/image";
 
 /**
@@ -12,6 +14,7 @@ import Image from "next/image";
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,11 +26,11 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { href: "#accueil", label: "Home" },
-    { href: "#a-propos", label: "About" },
-    { href: "#equipe", label: "Team" },
-    { href: "#services", label: "Services" },
-    { href: "#contact", label: "Contact" },
+    { href: "#accueil", label: t("nav.home") },
+    { href: "#a-propos", label: t("nav.about") },
+    { href: "#equipe", label: t("nav.team") },
+    { href: "#services", label: t("nav.services") },
+    { href: "#contact", label: t("nav.contact") },
   ];
 
   return (
@@ -77,12 +80,13 @@ export default function Header() {
 
           {/* Right side */}
           <div className="flex items-center gap-3">
+            <LanguageSelector />
             <ThemeToggle />
             <a
               href="#contact"
               className="hidden md:inline-flex items-center px-5 py-2 text-sm bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-full transition-all hover:scale-105"
             >
-              Contact
+              {t("nav.contact")}
             </a>
 
             {/* Mobile Menu Button */}
@@ -119,7 +123,7 @@ export default function Header() {
                 className="mx-4 mt-2 px-4 py-3 text-sm bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-full text-center transition-all"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Contact
+                {t("nav.contact")}
               </a>
             </div>
           </div>
