@@ -34,7 +34,7 @@ export default function Footer() {
                 <span className="text-white dark:text-gray-900 font-bold text-sm">JC</span>
               </div>
               <span className="text-lg font-semibold text-gray-900 dark:text-white">
-                Janga
+                Janga Consulting
               </span>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 max-w-sm leading-relaxed">
