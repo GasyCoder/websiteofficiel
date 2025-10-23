@@ -74,8 +74,8 @@ export const translations = {
     // Team
     "team.title": "Our",
     "team.title_highlight": "Team",
-    "team.subtitle": "Meet the experts who make {innovation} happen",
-    "team.innovation": "innovation",
+    "team.subtitle_highlight": "Passionate professionals",
+    "team.subtitle_text": "dedicated to your success",
   },
   fr: {
     // Header
@@ -152,7 +152,7 @@ export const translations = {
     // Team
     "team.title": "Notre",
     "team.title_highlight": "Équipe",
-    "team.subtitle": "Rencontrez les experts qui font l'{innovation}",
-    "team.innovation": "innovation",
+    "team.subtitle_highlight": "Professionnels passionnés",
+    "team.subtitle_text": "dédiés à votre succès",
   },
 };

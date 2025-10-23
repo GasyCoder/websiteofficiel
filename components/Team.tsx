@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Linkedin } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 /**
  * Team Section - Modern Minimalist Design
@@ -11,6 +12,7 @@ import { Linkedin } from "lucide-react";
 export default function Team() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   const teamMembers = [
     {
@@ -60,10 +62,10 @@ export default function Team() {
           className="max-w-3xl mb-12"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-            Our <span className="text-gradient-orange">Team</span>
+            {t("team.title")} <span className="text-gradient-orange">{t("team.title_highlight")}</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            <span className="font-semibold text-orange-600 dark:text-orange-400">Passionate professionals</span> dedicated to your success
+            <span className="font-semibold text-orange-600 dark:text-orange-400">{t("team.subtitle_highlight")}</span> {t("team.subtitle_text")}
           </p>
         </motion.div>
 
