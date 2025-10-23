@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Target, Lightbulb, Users, Rocket } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 /**
  * About Section - Modern Minimalist Design
@@ -11,27 +12,28 @@ import { Target, Lightbulb, Users, Rocket } from "lucide-react";
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   const features = [
     {
       icon: Target,
-      title: "Mission",
-      description: "Transform businesses through digital innovation",
+      title: t("about.feature.mission"),
+      description: t("about.feature.mission_desc"),
     },
     {
       icon: Lightbulb,
-      title: "Innovation",
-      description: "Cutting-edge tech for modern solutions",
+      title: t("about.feature.innovation"),
+      description: t("about.feature.innovation_desc"),
     },
     {
       icon: Users,
-      title: "Expertise",
-      description: "Skilled team ready for any challenge",
+      title: t("about.feature.expertise"),
+      description: t("about.feature.expertise_desc"),
     },
     {
       icon: Rocket,
-      title: "Results",
-      description: "On-time delivery with quality focus",
+      title: t("about.feature.results"),
+      description: t("about.feature.results_desc"),
     },
   ];
 
@@ -50,11 +52,21 @@ export default function About() {
           className="max-w-3xl mb-12"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-            About <span className="text-gradient-violet">Us</span>
+            {t("about.title")} <span className="text-gradient-violet">{t("about.title_highlight")}</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-            Based in <span className="font-semibold text-orange-600 dark:text-orange-400">Mahajanga, Madagascar</span>, we&apos;re a digital agency
-            specializing in <span className="font-semibold text-blue-600 dark:text-blue-400">web development</span>, technical consulting, and <span className="font-semibold text-violet-600 dark:text-violet-400">digital innovation</span>.
+            {t("about.description")
+              .replace("{location}", `<span class="font-semibold text-orange-600 dark:text-orange-400">${t("about.location")}</span>`)
+              .replace("{webDev}", `<span class="font-semibold text-blue-600 dark:text-blue-400">${t("about.web_dev")}</span>`)
+              .replace("{innovation}", `<span class="font-semibold text-violet-600 dark:text-violet-400">${t("about.innovation")}</span>`)
+              .split(/(<span[^>]*>.*?<\/span>)/g)
+              .map((part, i) =>
+                part.startsWith("<span") ? (
+                  <span key={i} dangerouslySetInnerHTML={{ __html: part }} />
+                ) : (
+                  part
+                )
+              )}
           </p>
         </motion.div>
 

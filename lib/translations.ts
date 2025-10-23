@@ -1,0 +1,166 @@
+export const translations = {
+  en: {
+    // Header
+    "nav.home": "Home",
+    "nav.about": "About",
+    "nav.team": "Team",
+    "nav.services": "Services",
+    "nav.contact": "Contact",
+
+    // Hero
+    "hero.badge": "Digital Innovation Studio",
+    "hero.company": "Janga Consulting",
+    "hero.tagline": "Building exceptional digital experiences",
+    "hero.description": "We craft modern web solutions that drive results",
+    "hero.cta": "Get Started",
+    "hero.view_services": "View Services",
+    "hero.stats.experts": "Experts",
+    "hero.stats.projects": "Projects",
+    "hero.stats.satisfaction": "Satisfaction",
+
+    // About
+    "about.title": "About",
+    "about.title_highlight": "Us",
+    "about.description": "Based in {location}, we're a digital agency specializing in {webDev}, technical consulting, and {innovation}.",
+    "about.location": "Mahajanga, Madagascar",
+    "about.web_dev": "web development",
+    "about.innovation": "digital innovation",
+    "about.feature.mission": "Mission",
+    "about.feature.mission_desc": "Transform businesses through digital innovation",
+    "about.feature.innovation": "Innovation",
+    "about.feature.innovation_desc": "Cutting-edge tech for modern solutions",
+    "about.feature.expertise": "Expertise",
+    "about.feature.expertise_desc": "Skilled team ready for any challenge",
+    "about.feature.results": "Results",
+    "about.feature.results_desc": "On-time delivery with quality focus",
+
+    // Team
+    "team.title": "Our Team",
+    "team.subtitle": "Meet the experts who make innovation happen",
+
+    // Services
+    "services.title": "Our",
+    "services.title_highlight": "Services",
+    "services.subtitle": "Comprehensive solutions for your {digitalNeeds}",
+    "services.digital_needs": "digital needs",
+    "services.web_dev": "Web Development",
+    "services.web_dev_desc": "Modern web applications built with cutting-edge technologies",
+    "services.mobile_apps": "Mobile Apps",
+    "services.mobile_apps_desc": "Native and cross-platform mobile solutions",
+    "services.ui_ux": "UI/UX Design",
+    "services.ui_ux_desc": "Beautiful interfaces that users love",
+    "services.tech_consulting": "Tech Consulting",
+    "services.tech_consulting_desc": "Strategic guidance for your tech stack",
+    "services.cloud_devops": "Cloud & DevOps",
+    "services.cloud_devops_desc": "Scalable infrastructure and deployment",
+    "services.digital_growth": "Digital Growth",
+    "services.digital_growth_desc": "Transform your business digitally",
+    "services.cta.title": "Ready to start your {project}?",
+    "services.cta.project": "project",
+    "services.cta.description": "Let's discuss how we can help bring your vision to life",
+    "services.cta.button": "Contact Us",
+
+    // Contact
+    "contact.title": "Get in",
+    "contact.title_highlight": "Touch",
+    "contact.subtitle": "Have a project in mind? {letsChat}",
+    "contact.lets_chat": "Let's chat",
+    "contact.info.email": "Email",
+    "contact.info.phone": "Phone",
+    "contact.info.location": "Location",
+
+    // Footer
+    "footer.description": "Digital agency based in Mahajanga, Madagascar. Transforming ideas into exceptional digital experiences.",
+    "footer.quick_links": "Quick Links",
+    "footer.social": "Social",
+    "footer.rights": "All rights reserved.",
+
+    // Team
+    "team.title": "Our",
+    "team.title_highlight": "Team",
+    "team.subtitle": "Meet the experts who make {innovation} happen",
+    "team.innovation": "innovation",
+  },
+  fr: {
+    // Header
+    "nav.home": "Accueil",
+    "nav.about": "À propos",
+    "nav.team": "Équipe",
+    "nav.services": "Services",
+    "nav.contact": "Contact",
+
+    // Hero
+    "hero.badge": "Studio d'Innovation Numérique",
+    "hero.company": "Janga Consulting",
+    "hero.tagline": "Créer des expériences numériques exceptionnelles",
+    "hero.description": "Nous créons des solutions web modernes qui génèrent des résultats",
+    "hero.cta": "Commencer",
+    "hero.view_services": "Voir les Services",
+    "hero.stats.experts": "Experts",
+    "hero.stats.projects": "Projets",
+    "hero.stats.satisfaction": "Satisfaction",
+
+    // About
+    "about.title": "À propos",
+    "about.title_highlight": "de nous",
+    "about.description": "Basés à {location}, nous sommes une agence numérique spécialisée dans le {webDev}, le conseil technique et l'{innovation}.",
+    "about.location": "Mahajanga, Madagascar",
+    "about.web_dev": "développement web",
+    "about.innovation": "innovation numérique",
+    "about.feature.mission": "Mission",
+    "about.feature.mission_desc": "Transformer les entreprises grâce à l'innovation numérique",
+    "about.feature.innovation": "Innovation",
+    "about.feature.innovation_desc": "Technologies de pointe pour des solutions modernes",
+    "about.feature.expertise": "Expertise",
+    "about.feature.expertise_desc": "Équipe qualifiée prête à relever tous les défis",
+    "about.feature.results": "Résultats",
+    "about.feature.results_desc": "Livraison dans les délais avec un focus sur la qualité",
+
+    // Team
+    "team.title": "Notre Équipe",
+    "team.subtitle": "Rencontrez les experts qui font l'innovation",
+
+    // Services
+    "services.title": "Nos",
+    "services.title_highlight": "Services",
+    "services.subtitle": "Solutions complètes pour vos {digitalNeeds}",
+    "services.digital_needs": "besoins numériques",
+    "services.web_dev": "Développement Web",
+    "services.web_dev_desc": "Applications web modernes construites avec des technologies de pointe",
+    "services.mobile_apps": "Applications Mobiles",
+    "services.mobile_apps_desc": "Solutions mobiles natives et multiplateformes",
+    "services.ui_ux": "Design UI/UX",
+    "services.ui_ux_desc": "Interfaces élégantes que les utilisateurs adorent",
+    "services.tech_consulting": "Conseil Technique",
+    "services.tech_consulting_desc": "Conseils stratégiques pour votre stack technologique",
+    "services.cloud_devops": "Cloud & DevOps",
+    "services.cloud_devops_desc": "Infrastructure évolutive et déploiement",
+    "services.digital_growth": "Croissance Digitale",
+    "services.digital_growth_desc": "Transformez votre entreprise numériquement",
+    "services.cta.title": "Prêt à démarrer votre {project} ?",
+    "services.cta.project": "projet",
+    "services.cta.description": "Discutons de la façon dont nous pouvons donner vie à votre vision",
+    "services.cta.button": "Contactez-nous",
+
+    // Contact
+    "contact.title": "Entrer en",
+    "contact.title_highlight": "Contact",
+    "contact.subtitle": "Vous avez un projet en tête ? {letsChat}",
+    "contact.lets_chat": "Discutons",
+    "contact.info.email": "Email",
+    "contact.info.phone": "Téléphone",
+    "contact.info.location": "Localisation",
+
+    // Footer
+    "footer.description": "Agence numérique basée à Mahajanga, Madagascar. Transformer les idées en expériences numériques exceptionnelles.",
+    "footer.quick_links": "Liens Rapides",
+    "footer.social": "Social",
+    "footer.rights": "Tous droits réservés.",
+
+    // Team
+    "team.title": "Notre",
+    "team.title_highlight": "Équipe",
+    "team.subtitle": "Rencontrez les experts qui font l'{innovation}",
+    "team.innovation": "innovation",
+  },
+};

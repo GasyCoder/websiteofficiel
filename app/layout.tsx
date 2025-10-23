@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
@@ -29,8 +30,10 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         <ThemeProvider>
-          {children}
-          <ScrollToTop />
+          <LanguageProvider>
+            {children}
+            <ScrollToTop />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

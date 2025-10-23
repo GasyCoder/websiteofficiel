@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 /**
  * Contact Section - Modern Minimalist Design
@@ -11,23 +12,24 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   const contactInfo = [
     {
       icon: Mail,
-      title: "Email",
+      title: t("contact.info.email"),
       value: "contact@jangaconsulting.com",
       href: "mailto:contact@jangaconsulting.com",
     },
     {
       icon: Phone,
-      title: "Phone",
+      title: t("contact.info.phone"),
       value: "+261 34 93 452 51",
       href: "tel:+261349345251",
     },
     {
       icon: MapPin,
-      title: "Location",
+      title: t("contact.info.location"),
       value: "Mahajanga, Madagascar",
       href: "https://www.google.com/maps/search/?api=1&query=Mahajanga,Madagascar",
     },
@@ -48,10 +50,11 @@ export default function Contact() {
           className="max-w-3xl mx-auto mb-12 text-center"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-            Get in <span className="text-gradient">Touch</span>
+            {t("contact.title")} <span className="text-gradient">{t("contact.title_highlight")}</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            Have a <span className="font-semibold text-violet-600 dark:text-violet-400">project</span> in mind? Let&apos;s talk about it
+            {t("contact.subtitle").replace("{letsChat}", "")}
+            <span className="font-semibold text-violet-600 dark:text-violet-400">{t("contact.lets_chat")}</span>
           </p>
         </motion.div>
 
