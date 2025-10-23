@@ -70,7 +70,7 @@ export const translations = {
     "contact.info.location": "Location",
 
     // Footer
-    "footer.description": "Digital agency based in Mahajanga, Madagascar. Transforming ideas into exceptional digital experiences.",
+    "footer.description": "Digital company committed to sustainable development, inclusive digital transformation and innovation serving communities. We are based in Mahajanga Madagascar, with a pan-African ambition.",
     "footer.quick_links": "Quick Links",
     "footer.social": "Social",
     "footer.rights": "All rights reserved.",
@@ -152,7 +152,7 @@ export const translations = {
     "contact.info.location": "Localisation",
 
     // Footer
-    "footer.description": "Agence numérique basée à Mahajanga, Madagascar. Transformer les idées en expériences numériques exceptionnelles.",
+    "footer.description": "Entreprise numérique engagée pour le développement durable, la transformation digitale inclusive et l'innovation au service des communautés. Nous sommes basés à Mahajanga Madagascar, avec une ambition panafricaine.",
     "footer.quick_links": "Liens Rapides",
     "footer.social": "Social",
     "footer.rights": "Tous droits réservés.",
