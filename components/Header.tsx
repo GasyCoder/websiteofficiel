@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSelector from "./LanguageSelector";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useTheme } from "./ThemeProvider";
 import Image from "next/image";
 
 /**
@@ -15,6 +16,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t } = useLanguage();
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,13 +52,13 @@ export default function Header() {
             className="flex items-center space-x-2.5 group"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            <div className="relative w-8 h-8 text-gray-900 dark:text-white transition-transform group-hover:scale-105">
+            <div className="relative w-8 h-8 transition-transform group-hover:scale-105">
               <Image
-                src="/janga.svg"
+                src={theme === "dark" ? "/janga_dark-mode.png" : "/janga_light-mode.svg"}
                 alt="Janga Logo"
                 width={32}
                 height={32}
-                className="w-full h-full"
+                className="w-full h-full object-contain"
                 priority
               />
             </div>
