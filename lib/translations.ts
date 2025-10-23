@@ -8,7 +8,7 @@ export const translations = {
     "nav.contact": "Contact",
 
     // Hero
-    "hero.badge": "Digital Innovation Studio",
+    "hero.badge": "Innovate for humanity",
     "hero.company": "Janga Consulting",
     "hero.tagline": "Building exceptional digital experiences",
     "hero.description": "We craft modern web solutions that drive results",
@@ -86,7 +86,7 @@ export const translations = {
     "nav.contact": "Contact",
 
     // Hero
-    "hero.badge": "Studio d'Innovation Numérique",
+    "hero.badge": "Innover pour l’humanité",
     "hero.company": "Janga Consulting",
     "hero.tagline": "Créer des expériences numériques exceptionnelles",
     "hero.description": "Nous créons des solutions web modernes qui génèrent des résultats",
